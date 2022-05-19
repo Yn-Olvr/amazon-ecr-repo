@@ -1,23 +1,5 @@
 pipeline {
     agent any
-<<<<<<< HEAD
-        tools{
-	        maven 'M2_HOME'
-
-	}
-	environment {
-        registry = '076892551558.dkr.ecr.us-east-1.amazonaws.com/devop_repository'
-	registryCredential = 'jenkins-ecr'
-	dockerimage = ''
-	}
-	stages {
-	    stage('Checkout'){
-	          steps{
-	               git branch: 'main', url: 'https://github.com/Hermann90/helloworld_jan_22.git'
-		:wq
-		}
-							        }
-=======
     tools{
         maven 'M2_HOME'
     }
@@ -60,4 +42,3 @@ pipeline {
         }  
     }
 }
->>>>>>> ae6d50fc9b881133450d387b59487620482947f5
