@@ -1,4 +1,3 @@
-FROM openjdk:8
-ADD target/spring-boot-maven-plugin.jar spring-boot-maven-plugin.jar
-EXPOSE 8081
-ENTRYPORT ["-java","-jar","spring-boot-maven-plugin.jar"]
+FROM java:8
+COPY webapp/target/webapp.war app.war
+ENTRYPOINT ["java","-jar","/app.war"]
